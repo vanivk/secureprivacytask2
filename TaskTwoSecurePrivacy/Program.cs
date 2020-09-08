@@ -27,18 +27,10 @@ namespace TaskTwoSecurePrivacy
 			}
 			else
 			{
-				int zeroCount = 0, oneCount = 0; 
-				foreach(char a in binarystring)
-				{
-					if(a == '0')
-					{
-						zeroCount++;
-					}
-					else if(a == '1')
-					{
-						oneCount++;
-					}
-				}
+				int zeroCount = 0, oneCount = 0;
+				zeroCount = binarystring.Trim().Where(x => (x == '0')).Count();
+				oneCount = binarystring.Trim().Where(x => (x == '1')).Count();
+				
 				if(zeroCount == oneCount)
 				{
 					
@@ -55,18 +47,11 @@ namespace TaskTwoSecurePrivacy
 								isGoodBinary = "bad";
 							}
 						}
-						foreach(char a in pre)
-						{
-							if (a == '0')
-							{
-								zeroPreCount++;
-							}
-							else if (a == '1')
-							{
-								onePreCount++;
-							}
-						}
-						if(zeroPreCount > onePreCount)
+
+						zeroPreCount = pre.Trim().Where(x => (x == '0')).Count();
+						onePreCount = pre.Trim().Where(x => (x == '1')).Count();
+						
+						if (zeroPreCount > onePreCount)
 						{
 							isGoodBinary = "bad";
 							break;
