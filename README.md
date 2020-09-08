@@ -8,8 +8,8 @@ Secure Privacy Task 2
 
 ## Conditions
 We consider a non-empty binary string to be good if the following two conditions are true:
-1.The number of 0's is equal to the number of 1's.
+1. The number of 0's is equal to the number of 1's.
 
-2.For every prefix of the binary string, the number of 1's should not be less than the number of 0's.
+2. For every prefix of the binary string, the number of 1's should not be less than the number of 0's.
 
 For example, 11010 is not good because it doesn't have an equal number of 0's and 1's, but 110010 is good because it satisfies both of the above conditions.
